@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/db/migrate/20190306094834_medicinetouserupdate.rb" />
+    <file url="file://$PROJECT_DIR$/db/migrate/20190306095934_medicinetouserupdatev2.rb" />
+    <file url="file://$PROJECT_DIR$/db/migrate/20190306100421_medicinev2.rb" />
+    <file url="file://$PROJECT_DIR$/db/migrate/20190306100742_measurement.rb" />
+    <file url="file://$PROJECT_DIR$/db/migrate/20190306104132_create_books.rb" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="ruby-2.3.3-p222" project-jdk-type="RUBY_SDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
