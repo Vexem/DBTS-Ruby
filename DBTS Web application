@@ -1,0 +1,30 @@
+DBTS Web application
+clientid: 725562981007-1m54kjtpr8gnsm9371cnndngras4hth5.apps.googleusercontent.com
+secret: VHl2N6qtAn9PVS1_l7o5Gh1E
+
+rails g model user provider uid name oauth_token oauth_expires_at:datetime
+
+Creazione file di migrazione del database
+rails generate model medicine
+rails generate migration Medicine
+
+rake db:migrate
+
+rails g controller home show
+rails g controller Sessions create destroy
+
+
+rails server -b localhost // to start server on localhost:3000
+
+to recreate DB
+rails db:environment:set RAILS_ENV=development
+rake db:drop db:create db:migrate
+
+API
+
+
+
+rails generate versionist:new_api_version v1 V1 --path=value:v1
+
+aprire le porte su winzozz
+pannello di controllo -> firewall -> impostazioni avanzate -> regole di conn entrata/uscita

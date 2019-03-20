@@ -34,13 +34,13 @@ ActiveRecord::Schema.define(version: 20190308111044) do
   end
 
   create_table "users", primary_key: "user_id", id: :bigint, default: nil, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "name"
-    t.string "surname"
+    t.string "provider"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "username"
+    t.string "email"
     t.string "oauth_token"
-    t.boolean "is_doctor"
     t.datetime "oauth_expires_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "measurements", "users", column: "patient_id", primary_key: "user_id"
