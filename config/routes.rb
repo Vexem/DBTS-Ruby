@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
 
-  get 'sessions/create'
+  # Routes for Google authentication
+  get 'auth/:provider/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/')
+  get 'signout', to: 'sessions#destroy', as: 'signout'
 
-  get 'sessions/destroy'
-
-  get 'home/show'
+  resources :sessions, only: [:create, :destroy]
+  resource :home, only: [:show]
+  root to: "home#show"
 
   namespace :api do
     namespace :v1 do
@@ -23,15 +26,6 @@ end
 
 
 DBTSRuby::Application.routes.draw do
-  # Routes for Google authentication
-  get 'auth/:provider/callback', to: 'sessions#create'
-  get 'auth/failure', to: redirect('/')
-  get 'signout', to: 'sessions#destroy', as: 'signout'
-
-  resources :sessions, only: [:create, :destroy]
-  resource :home, only: [:show]
-  root to: "home#show"
-
   namespace :api do
     namespace :v1 do
       resources :users do

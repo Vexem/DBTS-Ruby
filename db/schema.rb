@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190308111044) do
+ActiveRecord::Schema.define(version: 20190320124921) do
 
   create_table "measurements", primary_key: ["patient_id", "created_at"], force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "patient_id", null: false
@@ -33,17 +33,17 @@ ActiveRecord::Schema.define(version: 20190308111044) do
     t.index ["user_id"], name: "index_medicinetousers_on_user_id"
   end
 
-  create_table "users", primary_key: "user_id", id: :bigint, default: nil, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "provider"
+  create_table "users", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "first_name"
     t.string "last_name"
     t.string "username"
     t.string "email"
     t.string "oauth_token"
     t.datetime "oauth_expires_at"
+    t.string "provider", default: "email", null: false
+    t.string "uid", null: false
+    t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 
-  add_foreign_key "measurements", "users", column: "patient_id", primary_key: "user_id"
   add_foreign_key "medicinetousers", "medicines", primary_key: "medicine_id"
-  add_foreign_key "medicinetousers", "users", primary_key: "user_id"
 end
