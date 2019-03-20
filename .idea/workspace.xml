@@ -4,145 +4,8 @@
     <list default="true" id="003173d6-8f7c-483a-8247-dd9d1fb643f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/b29cecee-56ed-4c67-80c6-b81953090fed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b29cecee-56ed-4c67-80c6-b81953090fed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20190301101132_create_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20190301101132_create_users.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/.rspec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/DBTSRuby.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Gemfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Gemfile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Rakefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/assets/config/manifest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/assets/images/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/assets/javascripts/application.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/assets/javascripts/cable.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/assets/javascripts/channels/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/assets/javascripts/home.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/assets/javascripts/sessions.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/assets/stylesheets/application.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/assets/stylesheets/home.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/assets/stylesheets/sessions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/channels/application_cable/channel.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/channels/application_cable/connection.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/controllers/api/v1/base_controller.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/controllers/api/v1/measurements_controller.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/controllers/api/v1/medicines_controller.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/controllers/api/v1/medicinetouser_controller.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/controllers/api/v1/users_controller.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/controllers/application_controller.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/controllers/concerns/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/controllers/home_controller.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/controllers/sessions_controller.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/helpers/application_helper.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/helpers/home_helper.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/helpers/sessions_helper.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/jobs/application_job.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/mailers/application_mailer.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/models/application_record.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/models/concerns/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/models/measurement.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/models/medicine.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/models/medicinetouser.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/models/user.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/presenters/v1/base_presenter.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/views/home/show.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/views/layouts/application.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/views/layouts/mailer.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/views/layouts/mailer.text.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/views/sessions/create.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/views/sessions/destroy.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/apple-touch-icon-precomposed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/apple-touch-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bin/bundle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bin/rails" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bin/rake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bin/setup" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bin/update" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bin/yarn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/cacert.pem" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/config.ru" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/config/application.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/config/boot.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/config/cable.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/config/database.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/config/environment.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/config/environments/development.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/config/environments/production.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/config/environments/test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/config/initializers/application_controller_renderer.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/config/initializers/assets.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/config/initializers/backtrace_silencers.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/config/initializers/cookies_serializer.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/config/initializers/filter_parameter_logging.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/config/initializers/inflections.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/config/initializers/mime_types.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/config/initializers/omniauth.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/config/initializers/session_store.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/config/initializers/wrap_parameters.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/config/locales/en.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/config/puma.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/config/routes.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/config/secrets.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/db/migrate/20190301101132_create_users.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/db/migrate/20190304102459_create_medicines.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/db/migrate/20190304105538_create_measurements.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/db/migrate/20190308111044_mto_u.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/db/schema.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/db/seeds.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/docs/v1/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/docs/v1/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/google_sign_in.gemspec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/lib/assets/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/lib/tasks/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/log/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/422.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/500.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/apple-touch-icon-precomposed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/apple-touch-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/docs/v1/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/docs/v1/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spec/controllers/v1/base_controller_spec.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spec/models/book_spec.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spec/presenters/v1/base_presenter_spec.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spec/rails_helper.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spec/requests/v1/base_controller_spec.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spec/spec_helper.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/test/application_system_test_case.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/test/controllers/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/test/controllers/home_controller_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/test/controllers/sessions_controller_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/test/fixtures/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/test/fixtures/files/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/test/fixtures/measurements.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/test/fixtures/medicine_to_users.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/test/fixtures/medicine_vs_users.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/test/fixtures/medicines.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/test/fixtures/medicinetousers.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/test/fixtures/users.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/test/helpers/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/test/integration/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/test/mailers/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/test/models/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/test/models/measurement_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/test/models/medicine_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/test/models/medicine_to_user_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/test/models/medicine_vs_user_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/test/models/user_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/test/system/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/test/test_helper.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tmp/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -160,7 +23,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/DBTSRuby@db_migrate__DBTSRuby.rcov" NAME="db:migrate: DBTSRuby Coverage Results" MODIFIED="1552041712453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="DBTSRuby" />
-    <SUITE FILE_PATH="coverage/DBTSRuby@Development__DBTSRuby.rcov" NAME="Development: DBTSRuby Coverage Results" MODIFIED="1553085419746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="DBTSRuby" />
+    <SUITE FILE_PATH="coverage/DBTSRuby@Development__DBTSRuby.rcov" NAME="Development: DBTSRuby Coverage Results" MODIFIED="1553088589344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="DBTSRuby" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -200,61 +63,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="289">
-                  <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
-                  <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/db/migrate/20190301101132_create_users.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/db/migrate/20190304105538_create_measurements.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="9" column="85" selection-start-line="9" selection-start-column="85" selection-end-line="9" selection-end-column="85" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/db/migrate/20190308111044_mto_u.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="34">
-                  <caret line="2" selection-start-line="2" selection-end-line="2" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -308,7 +117,6 @@
         <option value="$PROJECT_DIR$/db/migrate/20190304102459_create_medicines.rb" />
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/v1/measurements_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/v1/medicinetouser_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/v1/users_controller.rb" />
@@ -316,10 +124,11 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/db/migrate/20190304105538_create_measurements.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20190308111044_mto_u.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20190301101132_create_users.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
       </list>
     </option>
   </component>
@@ -350,8 +159,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="RailsProjectView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -368,7 +177,24 @@
               <item name="DBTSRuby" type="b2602c69:ProjectViewProjectNode" />
               <item name="DBTSRuby" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DBTSRuby" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DBTSRuby" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DBTSRuby" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DBTSRuby" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DBTSRuby" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DBTSRuby" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="initializers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DBTSRuby" type="b2602c69:ProjectViewProjectNode" />
@@ -397,7 +223,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553085461437" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553088880318" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="E:/Download E/GoogleAuthExampleApp-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -628,11 +454,12 @@
       <workItem from="1552986986510" duration="1226000" />
       <workItem from="1552992739814" duration="338000" />
       <workItem from="1553082325895" duration="2946000" />
+      <workItem from="1553088013023" duration="1006000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103582000" />
+    <option name="totallyTimeSpent" value="104588000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -645,9 +472,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2094522" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21267454" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -656,7 +482,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49610388" weight="0.32687926" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7116004" visible="true" weight="0.28701594" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7116004" weight="0.28701594" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49785176" weight="0.39066058" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -706,26 +532,10 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/secrets.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190309113930_mtou2.rb" />
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190309115437_ettore.rb" />
-    <entry file="das://0d387651-9b12-4fa0-ae3b-1338b1065171/schema/dbtsruby_development/table/schema_migrations" />
-    <entry file="das://0d387651-9b12-4fa0-ae3b-1338b1065171/schema/dbtsruby_development/table/medicinetousers/index/index_medicinetousers_on_medicine_id" />
     <entry file="file://$PROJECT_DIR$/app/models/medicine_to_user.rb" />
     <entry file="das://0d387651-9b12-4fa0-ae3b-1338b1065171/schema/dbtsruby_development/table/medicines" />
     <entry file="das://0d387651-9b12-4fa0-ae3b-1338b1065171/schema/dbtsruby_development/table/users" />
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/sessions_controller.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/application_record.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/sessions_controller.rb" />
     <entry file="das://0d387651-9b12-4fa0-ae3b-1338b1065171/schema/dbtsruby_development/table/medicinetousers" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f13b0e1b-7f98-48c5-880a-bb8dce5507fd/console.sql" />
     <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/medicines_controller.rb">
@@ -746,13 +556,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/measurement.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -833,15 +636,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/v1/medicinetouser_controller.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/v1/medicines_controller.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/v1/measurements_controller.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/v1/medicinetouser_controller.rb" />
+    <entry file="file://$PROJECT_DIR$/app/controllers/v1/medicines_controller.rb" />
+    <entry file="file://$PROJECT_DIR$/app/controllers/v1/measurements_controller.rb" />
     <entry file="das://b29cecee-56ed-4c67-80c6-b81953090fed/schema/dbtsruby_development/table/users">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -871,9 +668,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tmp/pids/server.pid" />
-    <entry file="file://$PROJECT_DIR$/app/controllers/v1/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/v1/users_controller.rb" />
     <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/base_controller.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -898,37 +693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/omniauth.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="10" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/application.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -949,13 +713,7 @@
     <entry file="file://$PROJECT_DIR$/DBTSRuby.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" selection-start-column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/models/user.rb" />
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -963,29 +721,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-252" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Gemfile" />
     <entry file="file://C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/omniauth-1.9.0/lib/omniauth/builder.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190308111044_mto_u.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190304105538_create_measurements.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="85" selection-start-line="9" selection-start-column="85" selection-end-line="9" selection-end-column="85" />
         </state>
       </provider>
     </entry>
@@ -1003,17 +743,107 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190304105538_create_measurements.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="85" selection-start-line="9" selection-start-column="85" selection-end-line="9" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190308111044_mto_u.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+          <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/application_record.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/measurement.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b29cecee-56ed-4c67-80c6-b81953090fed/schema/dbtsruby_development/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b29cecee-56ed-4c67-80c6-b81953090fed/schema/dbtsruby_development/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b29cecee-56ed-4c67-80c6-b81953090fed/schema/dbtsruby_development/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b29cecee-56ed-4c67-80c6-b81953090fed/schema/dbtsruby_development/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        <state relative-caret-position="34">
+          <caret line="2" column="37" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/omniauth.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="10" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBTS Web application">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" selection-end-column="33" />
         </state>
       </provider>
     </entry>

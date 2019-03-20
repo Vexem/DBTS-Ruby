@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'sessions/create'
 
-  get 'sessions/destroy'
-
-  get 'home/show'
 
   namespace :api do
     namespace :v1 do
@@ -23,6 +19,7 @@ end
 
 
 DBTSRuby::Application.routes.draw do
+
   # Routes for Google authentication
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
