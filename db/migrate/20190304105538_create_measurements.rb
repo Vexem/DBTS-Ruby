@@ -1,7 +1,7 @@
 class CreateMeasurements < ActiveRecord::Migration[5.1]
   def change
     create_table :measurements, id: false do |t|
-      t.integer :patient_id, :limit =>5
+      t.decimal :patient_id, type: :decimal, precision:25, scale:0
       t.integer :value
       t.timestamps
     end

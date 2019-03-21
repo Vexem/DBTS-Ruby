@@ -1,7 +1,7 @@
 class CreateUsers < ActiveRecord::Migration[5.1]
   def change
     create_table :users, id: false do |t|
-      t.integer :user_id, :limit => 5
+      t.decimal :user_id, type: :decimal, precision:25, scale:0
       t.string :provider
       t.string :first_name
       t.string :last_name
