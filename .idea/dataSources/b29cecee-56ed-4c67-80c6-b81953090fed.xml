@@ -4191,7 +4191,7 @@
     </key>
     <column id="609" parent="234" name="patient_id">
       <Position>1</Position>
-      <DataType>bigint(20)|0s</DataType>
+      <DataType>decimal(25)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -4220,7 +4220,7 @@ created_at</ColNames>
     </foreign-key>
     <column id="614" parent="235" name="medicine_id">
       <Position>1</Position>
-      <DataType>bigint(20)|0s</DataType>
+      <DataType>decimal(25)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -4248,13 +4248,13 @@ created_at</ColNames>
     </key>
     <column id="619" parent="236" name="user_id">
       <Position>1</Position>
-      <DataType>bigint(20)|0s</DataType>
+      <DataType>decimal(25)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="620" parent="236" name="medicine_id">
       <Position>2</Position>
-      <DataType>bigint(20)|0s</DataType>
+      <DataType>decimal(25)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -4309,7 +4309,7 @@ medicine_id</ColNames>
     </key>
     <column id="630" parent="238" name="user_id">
       <Position>1</Position>
-      <DataType>bigint(20)|0s</DataType>
+      <DataType>decimal(25)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>

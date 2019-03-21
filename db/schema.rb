@@ -13,27 +13,27 @@
 ActiveRecord::Schema.define(version: 20190308111044) do
 
   create_table "measurements", primary_key: ["patient_id", "created_at"], force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.bigint "patient_id", null: false
+    t.decimal "patient_id", precision: 25, null: false
     t.integer "value"
     t.datetime "created_at", null: false
   end
 
-  create_table "medicines", primary_key: "medicine_id", id: :bigint, default: nil, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "medicines", primary_key: "medicine_id", id: :decimal, precision: 25, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "medicine_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "medicinetousers", primary_key: ["user_id", "medicine_id"], force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.bigint "user_id", null: false
-    t.bigint "medicine_id", null: false
+    t.decimal "user_id", precision: 25, null: false
+    t.decimal "medicine_id", precision: 25, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["medicine_id"], name: "index_medicinetousers_on_medicine_id"
     t.index ["user_id"], name: "index_medicinetousers_on_user_id"
   end
 
-  create_table "users", primary_key: "user_id", id: :bigint, default: nil, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "users", primary_key: "user_id", id: :decimal, precision: 25, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "provider"
     t.string "first_name"
     t.string "last_name"
