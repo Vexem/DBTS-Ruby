@@ -20,7 +20,7 @@ module Api
       end
 
       def user_params
-        params.require(:user).permit(:uid, :name, :is_doctor, :patient_id, :surname)
+        params.require(:user).permit(:uid, :name, :medic_name, :patient_id, :surname)
       end
     end
   end

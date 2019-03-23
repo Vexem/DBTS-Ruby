@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       resources :medicines, only: [:index]
       resources :measurements, only: [:index]
       resources :medicinetouser, only: [:index]
+      resources :medics, only: [:index]
       resources :sessions, only: [:create, :destroy]
     end
   end
@@ -34,6 +35,8 @@ DBTSRuby::Application.routes.draw do
       resources :users do
       end
       resources :medicines do
+      end
+      resources :medics do
       end
       resources :measurements do
       end

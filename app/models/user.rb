@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :medicinetousers
   has_many :measurement
+  belongs_to :medic
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, user_id: auth.user_id).first_or_initialize.tap do |user|
