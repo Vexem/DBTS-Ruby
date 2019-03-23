@@ -4,13 +4,12 @@
     <list default="true" id="003173d6-8f7c-483a-8247-dd9d1fb643f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/b29cecee-56ed-4c67-80c6-b81953090fed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b29cecee-56ed-4c67-80c6-b81953090fed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/v1/medics_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/medics_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/api/v1/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/users_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/medicine.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/medicine.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/medic.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/medic.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/migrate/20190301101132_create_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20190301101132_create_users.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20190323221501_create_medics.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20190323221501_create_medics.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/models/book_spec.rb" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -100,8 +99,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/medic.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+            <state relative-caret-position="68">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/medicine.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/users_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="3" lean-forward="true" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -109,44 +126,111 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20190301101132_create_users.rb">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="3" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="uml://RailsDependency/User">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>RailsDependency</ID>
+              <OriginalElement>User</OriginalElement>
+              <nodes>
+                <node x="223.58928571428575" y="269.0">User</node>
+                <node x="0.0" y="90.0">Measurement</node>
+                <node x="368.6964285714286" y="0.0">ApplicationRecord</node>
+                <node x="535.8214285714287" y="368.0">Medicine</node>
+                <node x="432.0" y="112.0">Medicinetouser</node>
+                <node x="248.00000000000003" y="79.0">Medic</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="User" target="Measurement">
+                  <point x="-83.25" y="-136.0" />
+                  <point x="251.33928571428575" y="244.0" />
+                  <point x="114.0" y="244.0" />
+                  <point x="0.0" y="59.0" />
+                </edge>
+                <edge source="User" target="Medicinetouser">
+                  <point x="83.25" y="-136.0" />
+                  <point x="417.8392857142858" y="244.0" />
+                  <point x="487.5" y="244.0" />
+                  <point x="-55.5" y="37.0" />
+                </edge>
+                <edge source="Measurement" target="ApplicationRecord">
+                  <point x="0.0" y="-59.0" />
+                  <point x="114.0" y="49.0" />
+                  <point x="384.8214285714286" y="49.0" />
+                  <point x="-48.375" y="14.5" />
+                </edge>
+                <edge source="Medic" target="ApplicationRecord">
+                  <point x="0.0" y="-70.0" />
+                  <point x="330.0" y="59.0" />
+                  <point x="417.0714285714286" y="59.0" />
+                  <point x="-16.125" y="14.5" />
+                </edge>
+                <edge source="Medicinetouser" target="ApplicationRecord">
+                  <point x="0.0" y="-37.0" />
+                  <point x="543.0" y="59.0" />
+                  <point x="449.3214285714286" y="59.0" />
+                  <point x="16.125" y="14.5" />
+                </edge>
+                <edge source="User" target="Medic">
+                  <point x="-27.75" y="-136.0" />
+                  <point x="306.8392857142858" y="244.0" />
+                  <point x="289.0" y="244.0" />
+                  <point x="-41.0" y="70.0" />
+                </edge>
+                <edge source="Medicine" target="ApplicationRecord">
+                  <point x="55.5" y="-37.0" />
+                  <point x="702.3214285714287" y="244.0" />
+                  <point x="679.8214285714286" y="244.0" />
+                  <point x="679.8214285714286" y="49.0" />
+                  <point x="481.5714285714286" y="49.0" />
+                  <point x="48.375" y="14.5" />
+                </edge>
+                <edge source="Medic" target="User">
+                  <point x="41.0" y="70.0" />
+                  <point x="371.0" y="244.0" />
+                  <point x="362.3392857142858" y="244.0" />
+                  <point x="27.75" y="-136.0" />
+                </edge>
+                <edge source="Medicine" target="Medicinetouser">
+                  <point x="-55.5" y="-37.0" />
+                  <point x="591.3214285714287" y="244.0" />
+                  <point x="598.5" y="244.0" />
+                  <point x="55.5" y="37.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.0" x="-61.5" y="72.5" />
+              <SelectedNodes>
+                <node>Medicine</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Association fields</Category>
+                <Category>Migration fields</Category>
+              </Categories>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20190304102459_create_medicines.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/medics_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/users_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20190323221501_create_medics.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/medicines_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+              <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -170,93 +254,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/medicine.rb">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20190323221501_create_medics.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="34" selection-start-column="34" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="uml://RailsDependency/User">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>RailsDependency</ID>
-              <OriginalElement>User</OriginalElement>
-              <nodes>
-                <node x="223.58928571428575" y="269.0">User</node>
-                <node x="0.0" y="90.0">Measurement</node>
-                <node x="368.6964285714286" y="0.0">ApplicationRecord</node>
-                <node x="535.8214285714287" y="379.0">Medicine</node>
-                <node x="432.0" y="112.0">Medicinetouser</node>
-                <node x="248.00000000000003" y="79.0">Medic</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="User" target="Measurement">
-                  <point x="-83.25" y="-147.0" />
-                  <point x="251.33928571428575" y="244.0" />
-                  <point x="114.0" y="244.0" />
-                  <point x="0.0" y="59.0" />
-                </edge>
-                <edge source="User" target="Medicinetouser">
-                  <point x="83.25" y="-147.0" />
-                  <point x="417.8392857142858" y="244.0" />
-                  <point x="487.5" y="244.0" />
-                  <point x="-55.5" y="37.0" />
-                </edge>
-                <edge source="Measurement" target="ApplicationRecord">
-                  <point x="0.0" y="-59.0" />
-                  <point x="114.0" y="49.0" />
-                  <point x="384.8214285714286" y="49.0" />
-                  <point x="-48.375" y="14.5" />
-                </edge>
-                <edge source="Medicinetouser" target="ApplicationRecord">
-                  <point x="0.0" y="-37.0" />
-                  <point x="543.0" y="59.0" />
-                  <point x="449.3214285714286" y="59.0" />
-                  <point x="16.125" y="14.5" />
-                </edge>
-                <edge source="Medic" target="ApplicationRecord">
-                  <point x="0.0" y="-70.0" />
-                  <point x="330.0" y="59.0" />
-                  <point x="417.0714285714286" y="59.0" />
-                  <point x="-16.125" y="14.5" />
-                </edge>
-                <edge source="User" target="Medic">
-                  <point x="-27.75" y="-147.0" />
-                  <point x="306.8392857142858" y="244.0" />
-                  <point x="289.0" y="244.0" />
-                  <point x="-41.0" y="70.0" />
-                </edge>
-                <edge source="Medicine" target="ApplicationRecord">
-                  <point x="55.5" y="-37.0" />
-                  <point x="702.3214285714287" y="244.0" />
-                  <point x="679.8214285714286" y="244.0" />
-                  <point x="679.8214285714286" y="49.0" />
-                  <point x="481.5714285714286" y="49.0" />
-                  <point x="48.375" y="14.5" />
-                </edge>
-                <edge source="Medic" target="User">
-                  <point x="41.0" y="70.0" />
-                  <point x="371.0" y="244.0" />
-                  <point x="362.3392857142858" y="244.0" />
-                  <point x="27.75" y="-147.0" />
-                </edge>
-                <edge source="Medicine" target="Medicinetouser">
-                  <point x="-55.5" y="-37.0" />
-                  <point x="591.3214285714287" y="244.0" />
-                  <point x="598.5" y="244.0" />
-                  <point x="55.5" y="37.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="301.0" y="365.5" />
-              <SelectedNodes />
-              <Categories>
-                <Category>Association fields</Category>
-                <Category>Migration fields</Category>
-              </Categories>
+            <state relative-caret-position="221">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -274,6 +275,7 @@
       <find>book</find>
       <find>medicine_to_users</find>
       <find>user_id</find>
+      <find>medic_name</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -324,12 +326,12 @@
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/models/medicine.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/models/medic.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/v1/medics_controller.rb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/api/v1/users_controller.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20190301101132_create_users.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20190323221501_create_medics.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20190301101132_create_users.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/api/v1/users_controller.rb" />
       </list>
     </option>
   </component>
@@ -346,11 +348,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-18" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="142" />
     <option name="y" value="43" />
-    <option name="width" value="3590" />
-    <option name="height" value="2006" />
+    <option name="width" value="3591" />
+    <option name="height" value="2007" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -360,8 +362,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="RailsProjectView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -425,14 +426,15 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553380669408" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553383467414" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="E:/Download E/GoogleAuthExampleApp-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -670,11 +672,12 @@
       <workItem from="1553199634468" duration="591000" />
       <workItem from="1553208342117" duration="5000" />
       <workItem from="1553351509919" duration="3727000" />
+      <workItem from="1553380893584" duration="3055000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114845000" />
+    <option name="totallyTimeSpent" value="117900000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -686,9 +689,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-12" y="29" width="2393" height="1337" extended-state="0" />
+    <frame x="-7" y="-7" width="2575" height="1424" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11958851" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11172962" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -696,7 +699,7 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49610388" weight="0.32687926" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49610388" weight="0.32669982" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7116004" weight="0.28612998" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49785176" weight="0.39066058" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -705,7 +708,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32915717" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.69548875" visible="true" weight="0.23153527" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.69548875" visible="true" weight="0.21594428" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.28839958" side_tool="true" weight="0.28701594" />
       <window_info anchor="bottom" id="Database Console" order="12" sideWeight="0.49946353" weight="0.3291714" />
       <window_info anchor="bottom" id="Messages" order="13" />
@@ -717,7 +720,7 @@
       <window_info anchor="right" id="Maven" order="5" weight="0.17133956" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info active="true" anchor="right" id="Database" order="8" visible="true" weight="0.12687527" />
+      <window_info anchor="right" id="Database" order="8" visible="true" weight="0.2751491" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -748,8 +751,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/sessions_controller.rb" />
-    <entry file="das://0d387651-9b12-4fa0-ae3b-1338b1065171/schema/dbtsruby_development/table/medicinetousers" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f13b0e1b-7f98-48c5-880a-bb8dce5507fd/console.sql" />
     <entry file="das://b29cecee-56ed-4c67-80c6-b81953090fed/schema/dbtsruby_development/table/medicines">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -820,13 +821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -913,17 +907,339 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/medicine.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="34" selection-start-column="34" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/medicinetouser.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/models/book_spec.rb" />
+    <entry file="file://$PROJECT_DIR$/spec/models/medic_spec.rb" />
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190323221835_medic.rb" />
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/medicines_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/b29cecee-56ed-4c67-80c6-b81953090fed">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>b29cecee-56ed-4c67-80c6-b81953090fed</OriginalElement>
+          <nodes>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_statements_summary_by_program</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.wait_classes_global_by_latency</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_SYS_INDEXES</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.innodb_buffer_stats_by_schema</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$schema_table_statistics</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_waits_summary_by_thread_by_event_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.EVENTS</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_LOCKS</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.time_zone</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.session_ssl_status</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.innodb_table_stats</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:dbtsruby_development.measurements</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.memory_summary_by_account_by_event_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.tables_priv</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.setup_objects</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.TABLESPACES</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_SYS_DATAFILES</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.schema_table_statistics_with_buffer</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.io_global_by_file_by_bytes</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_TRX</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_stages_summary_by_user_by_event_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_stages_history</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_CMPMEM_RESET</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.session_status</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.memory_summary_by_thread_by_event_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.status_by_host</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_stages_summary_by_thread_by_event_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$statements_with_runtimes_in_95th_percentile</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.USER_PRIVILEGES</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_transactions_current</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.VIEWS</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.slave_relay_log_info</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.servers</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_stages_history_long</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.TRIGGERS</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.replication_connection_configuration</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_LOCK_WAITS</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_waits_history_long</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.ENGINES</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.statement_analysis</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.version</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.setup_actors</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.waits_by_host_by_latency</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.table_io_waits_summary_by_table</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$schema_table_statistics_with_buffer</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.time_zone_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.user_summary_by_statement_latency</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.replication_group_members</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.file_instances</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$io_global_by_wait_by_latency</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.help_topic</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.schema_unused_indexes</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_statements_summary_by_user_by_event_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_CMP_RESET</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_SYS_VIRTUAL</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.schema_table_lock_waits</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$io_global_by_file_by_bytes</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$host_summary_by_file_io</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.replication_applier_status_by_coordinator</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.cond_instances</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.accounts</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.statements_with_full_table_scans</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.FILES</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$host_summary_by_stages</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.general_log</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.slave_master_info</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$user_summary_by_file_io</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.user_summary_by_statement_type</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.gtid_executed</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$schema_index_statistics</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.TABLE_CONSTRAINTS</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$statements_with_errors_or_warnings</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_waits_summary_by_user_by_event_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_waits_current</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.STATISTICS</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_CMP_PER_INDEX</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.time_zone_transition</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_FT_CONFIG</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_waits_summary_global_by_event_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.slow_log</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_METRICS</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$statement_analysis</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.PARTITIONS</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$host_summary_by_file_io_type</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$wait_classes_global_by_latency</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_transactions_history</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$innodb_buffer_stats_by_table</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_TEMP_TABLE_INFO</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$ps_digest_avg_latency_distribution</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.global_status</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$processlist</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.SCHEMA_PRIVILEGES</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_FT_DEFAULT_STOPWORD</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.CHARACTER_SETS</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_stages_current</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.func</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_statements_summary_by_digest</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_transactions_summary_by_account_by_event_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_SYS_FOREIGN</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_CMPMEM</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:sys.sys_config</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:dbtsruby_development.users</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.global_variables</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_SYS_FIELDS</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$latest_file_io</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.time_zone_transition_type</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:dbtsruby_development.medicines</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.COLLATION_CHARACTER_SET_APPLICABILITY</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_statements_history</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.GLOBAL_VARIABLES</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.host_cache</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.innodb_index_stats</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_FT_DELETED</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$schema_tables_with_full_table_scans</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_stages_summary_global_by_event_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.wait_classes_global_by_avg_latency</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_statements_summary_by_thread_by_event_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.innodb_lock_waits</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_transactions_summary_by_host_by_event_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.schema_redundant_indexes</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.KEY_COLUMN_USAGE</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.users</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.socket_instances</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.setup_timers</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.COLUMN_PRIVILEGES</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$statements_with_full_table_scans</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_FT_BEING_DELETED</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.time_zone_leap_second</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$memory_by_host_by_current_bytes</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.latest_file_io</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.user_variables_by_thread</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_BUFFER_POOL_STATS</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.user_summary</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_statements_summary_by_account_by_event_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$statements_with_sorting</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.table_lock_waits_summary_by_table</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$ps_digest_95th_percentile_by_avg_us</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.host_summary_by_statement_type</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.COLLATIONS</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.memory_summary_global_by_event_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.event</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.engine_cost</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.schema_tables_with_full_table_scans</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.ROUTINES</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$waits_global_by_latency</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$user_summary</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$memory_global_total</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:dbtsruby_development.medics</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.PLUGINS</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:dbtsruby_development.schema_migrations</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_BUFFER_PAGE_LRU</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.schema_index_statistics</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.io_global_by_file_by_latency</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_SYS_COLUMNS</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.variables_by_thread</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$user_summary_by_statement_type</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.server_cost</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.schema_auto_increment_columns</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.COLUMNS</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.SESSION_VARIABLES</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.TABLE_PRIVILEGES</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.schema_table_statistics</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.PARAMETERS</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_transactions_summary_global_by_event_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.TABLES</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.prepared_statements_instances</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.session_account_connect_attrs</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.table_handles</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.status_by_user</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:dbtsruby_development.medicinetousers</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.procs_priv</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.user</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_transactions_summary_by_user_by_event_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.hosts</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.rwlock_instances</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.slave_worker_info</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$schema_flattened_keys</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.io_global_by_wait_by_bytes</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$io_by_thread_by_latency</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_CMP</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$waits_by_host_by_latency</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.statements_with_errors_or_warnings</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.help_keyword</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.threads</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.user_summary_by_file_io_type</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.host_summary_by_file_io_type</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.ps_check_lost_instrumentation</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.host_summary_by_file_io</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.setup_consumers</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.memory_by_host_by_current_bytes</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$waits_by_user_by_latency</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.replication_connection_status</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_SYS_TABLES</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.user_summary_by_file_io</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.processlist</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.memory_global_by_current_bytes</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_CMP_PER_INDEX_RESET</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.waits_global_by_latency</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_stages_summary_by_account_by_event_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_FT_INDEX_CACHE</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.status_by_thread</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.statements_with_temp_tables</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.innodb_buffer_stats_by_table</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$io_global_by_file_by_latency</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_waits_summary_by_host_by_event_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.user_summary_by_stages</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.metrics</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.memory_summary_by_host_by_event_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.proxies_priv</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.db</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.metadata_locks</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.waits_by_user_by_latency</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_waits_summary_by_instance</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$statements_with_temp_tables</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.replication_applier_status</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.replication_applier_configuration</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:dbtsruby_development.ar_internal_metadata</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.PROFILING</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_FT_INDEX_TABLE</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$host_summary_by_statement_type</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_SYS_TABLESTATS</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$user_summary_by_statement_latency</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$schema_table_lock_waits</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$memory_by_user_by_current_bytes</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_SYS_FOREIGN_COLS</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_waits_history</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.performance_timers</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.replication_group_member_stats</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.GLOBAL_STATUS</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.OPTIMIZER_TRACE</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$user_summary_by_file_io_type</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$user_summary_by_stages</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_stages_summary_by_host_by_event_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.help_category</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$innodb_buffer_stats_by_schema</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.host_summary_by_stages</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.ndb_binlog_index</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.schema_object_overview</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_statements_current</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.plugin</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.host_summary_by_statement_latency</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.io_by_thread_by_latency</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.replication_applier_status_by_worker</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$host_summary_by_statement_latency</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.status_by_account</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_statements_summary_global_by_event_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.statements_with_sorting</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.statements_with_runtimes_in_95th_percentile</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.session_variables</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.memory_by_thread_by_current_bytes</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.proc</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.SCHEMATA</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.file_summary_by_event_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$wait_classes_global_by_avg_latency</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_statements_history_long</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.host_summary</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$memory_by_thread_by_current_bytes</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.memory_global_total</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.mutex_instances</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.session</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.SESSION_STATUS</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.socket_summary_by_instance</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_SYS_TABLESPACES</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_statements_summary_by_host_by_event_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.objects_summary_global_by_type</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$ps_schema_table_statistics_io</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.session_connect_attrs</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.columns_priv</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:mysql.help_relation</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$innodb_lock_waits</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_waits_summary_by_account_by_event_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.file_summary_by_instance</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.setup_instruments</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.PROCESSLIST</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$memory_global_by_current_bytes</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$host_summary</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.table_io_waits_summary_by_index_usage</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.REFERENTIAL_CONSTRAINTS</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.socket_summary_by_event_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_transactions_history_long</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$io_global_by_wait_by_bytes</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.memory_summary_by_user_by_event_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:information_schema.INNODB_BUFFER_PAGE</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.TABLE:performance_schema.events_transactions_summary_by_thread_by_event_name</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.memory_by_user_by_current_bytes</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.x$session</node>
+            <node x="" y="">b29cecee-56ed-4c67-80c6-b81953090fed.VIEW:sys.io_global_by_wait_by_latency</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.13147230977037372" x="3089.0" y="3311.4999999999995" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
         </state>
       </provider>
     </entry>
@@ -934,35 +1250,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/medicines_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/medicine.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+        <state relative-caret-position="68">
+          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/models/book_spec.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/models/medic_spec.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190323221835_medic.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/medic.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/medics_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="22" column="79" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="79" />
+          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190323232510_user.rb">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20190308111044_mto_u.rb">
       <provider selected="true" editor-type-id="text-editor">
@@ -971,10 +1281,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/users_controller.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190323221501_create_medics.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
@@ -982,27 +1292,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190301101132_create_users.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190323221501_create_medics.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
@@ -1015,20 +1304,20 @@
             <node x="223.58928571428575" y="269.0">User</node>
             <node x="0.0" y="90.0">Measurement</node>
             <node x="368.6964285714286" y="0.0">ApplicationRecord</node>
-            <node x="535.8214285714287" y="379.0">Medicine</node>
+            <node x="535.8214285714287" y="368.0">Medicine</node>
             <node x="432.0" y="112.0">Medicinetouser</node>
             <node x="248.00000000000003" y="79.0">Medic</node>
           </nodes>
           <notes />
           <edges>
             <edge source="User" target="Measurement">
-              <point x="-83.25" y="-147.0" />
+              <point x="-83.25" y="-136.0" />
               <point x="251.33928571428575" y="244.0" />
               <point x="114.0" y="244.0" />
               <point x="0.0" y="59.0" />
             </edge>
             <edge source="User" target="Medicinetouser">
-              <point x="83.25" y="-147.0" />
+              <point x="83.25" y="-136.0" />
               <point x="417.8392857142858" y="244.0" />
               <point x="487.5" y="244.0" />
               <point x="-55.5" y="37.0" />
@@ -1039,20 +1328,20 @@
               <point x="384.8214285714286" y="49.0" />
               <point x="-48.375" y="14.5" />
             </edge>
-            <edge source="Medicinetouser" target="ApplicationRecord">
-              <point x="0.0" y="-37.0" />
-              <point x="543.0" y="59.0" />
-              <point x="449.3214285714286" y="59.0" />
-              <point x="16.125" y="14.5" />
-            </edge>
             <edge source="Medic" target="ApplicationRecord">
               <point x="0.0" y="-70.0" />
               <point x="330.0" y="59.0" />
               <point x="417.0714285714286" y="59.0" />
               <point x="-16.125" y="14.5" />
             </edge>
+            <edge source="Medicinetouser" target="ApplicationRecord">
+              <point x="0.0" y="-37.0" />
+              <point x="543.0" y="59.0" />
+              <point x="449.3214285714286" y="59.0" />
+              <point x="16.125" y="14.5" />
+            </edge>
             <edge source="User" target="Medic">
-              <point x="-27.75" y="-147.0" />
+              <point x="-27.75" y="-136.0" />
               <point x="306.8392857142858" y="244.0" />
               <point x="289.0" y="244.0" />
               <point x="-41.0" y="70.0" />
@@ -1069,7 +1358,7 @@
               <point x="41.0" y="70.0" />
               <point x="371.0" y="244.0" />
               <point x="362.3392857142858" y="244.0" />
-              <point x="27.75" y="-147.0" />
+              <point x="27.75" y="-136.0" />
             </edge>
             <edge source="Medicine" target="Medicinetouser">
               <point x="-55.5" y="-37.0" />
@@ -1078,12 +1367,28 @@
               <point x="55.5" y="37.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="301.0" y="365.5" />
-          <SelectedNodes />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-61.5" y="72.5" />
+          <SelectedNodes>
+            <node>Medicine</node>
+          </SelectedNodes>
           <Categories>
             <Category>Association fields</Category>
             <Category>Migration fields</Category>
           </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190301101132_create_users.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="3" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/users_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="3" lean-forward="true" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
         </state>
       </provider>
     </entry>

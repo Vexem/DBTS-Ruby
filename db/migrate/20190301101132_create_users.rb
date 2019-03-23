@@ -7,7 +7,7 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :last_name
       t.string :username
       t.string :email
-      t.string :medic_name
+      t.integer :medic_id
       t.string :oauth_token
       t.datetime :oauth_expires_at
 

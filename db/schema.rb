@@ -33,7 +33,8 @@ ActiveRecord::Schema.define(version: 20190323221501) do
     t.index ["user_id"], name: "index_medicinetousers_on_user_id"
   end
 
-  create_table "medics", primary_key: "medic_name", id: :string, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "medics", primary_key: "medic_id", id: :integer, default: nil, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "medic_name"
     t.string "medic_mail"
     t.string "medic_hospital"
     t.datetime "created_at", null: false
@@ -46,14 +47,14 @@ ActiveRecord::Schema.define(version: 20190323221501) do
     t.string "last_name"
     t.string "username"
     t.string "email"
-    t.string "medic_name"
+    t.integer "medic_id"
     t.string "oauth_token"
     t.datetime "oauth_expires_at"
-    t.index ["medic_name"], name: "fk_rails_461315dc13"
+    t.index ["medic_id"], name: "fk_rails_71736ad0b2"
   end
 
   add_foreign_key "measurements", "users", column: "patient_id", primary_key: "user_id"
   add_foreign_key "medicinetousers", "medicines", primary_key: "medicine_id"
   add_foreign_key "medicinetousers", "users", primary_key: "user_id"
-  add_foreign_key "users", "medics", column: "medic_name", primary_key: "medic_name"
+  add_foreign_key "users", "medics", primary_key: "medic_id"
 end

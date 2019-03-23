@@ -20,7 +20,7 @@ module Api
       end
 
       def medic_param
-        params.require(:medic).permit(:medic_name, :medic_mail, :medic_hospital)
+        params.require(:medic).permit(:medic_id, :medic_name, :medic_mail, :medic_hospital)
       end
     end
   end
