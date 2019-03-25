@@ -16,8 +16,6 @@
 # end
 #
 
-
-
 DBTSRuby::Application.routes.draw do
 
   # Routes for Google authentication
@@ -25,6 +23,8 @@ DBTSRuby::Application.routes.draw do
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
   get 'measurements/getmeasurementbyuid/:patient_id', :to => 'measurements#getmeasurementbyuid'
+  get 'users/getuserbyid/:user_id', :to => 'users#getuserbyid'
+  post 'users/saveuser', :to => 'users#saveuser'
 
   resources :sessions, only: [:create, :destroy]
   resource :home, only: [:show]
