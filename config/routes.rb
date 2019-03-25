@@ -39,6 +39,7 @@ DBTSRuby::Application.routes.draw do
       resources :medics do
       end
       resources :measurements do
+        get 'getmeasurementsbyuid', on: :collection
       end
       resources :medicinetouser do
       end
