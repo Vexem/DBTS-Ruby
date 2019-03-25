@@ -1,16 +1,18 @@
 module Api
   module V1
     class Api::V1::MeasurementsController < ApplicationController
-      before_action :set_user, only: [:show, :update, :destroy]
+      before_action :getmeasurementbyuid, only: [:show, :edit, :update, :destroy]
 
-      # GET api/v1/users
+      def show
+      end
+      # GET api/v1/measurements
       def index
         measurements = Measurement.all
         render json: { measurements: measurements }, status: :ok
       end
 
       def create
-        measurements = Measurement.new(meas_param)
+        measurements = Measurement.new(measurement_param)
 
         if measurements.save
           render json: measurements, status: :created
@@ -19,16 +21,15 @@ module Api
         end
       end
 
-      #http://192.168.1.5/api/v1/measurements?patient_id=1
+      #http://192.168.1.5/api/v1/measurements/getmeasurementbyuid?patient_id=1
       def getmeasurementbyuid
-          patient_id = params[:patient_id]
-          measuremnts = []
-          Measurement.find_by_[patient_id]
-          render json: measuremnts
+        patient_id = params[:patient_id]
+        measurements = Measurement.where(patient_id: patient_id)
+        render json: measurements
       end
 
-      def meas_param
-        params.require(:measurement).permit(:measurement, :patient_id)
+      def measurement_param
+        params.require(:measurement).permit(:patient_id, :value ,:created_at)
       end
     end
   end
