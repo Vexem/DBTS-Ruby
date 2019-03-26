@@ -1,9 +1,11 @@
 module Api
   module V1
     class Api::V1::MeasurementsController < ApplicationController
-      before_action :set_user, only: [:show, :update, :destroy]
+      before_action :getmeasurementbyuid, only: [:show, :edit, :update, :destroy]
 
-      # GET api/v1/users
+      def show
+      end
+      # GET api/v1/measurements
       def index
         measurements = Measurement.all
         render json: { measurements: measurements }, status: :ok
@@ -17,6 +19,13 @@ module Api
         else
           render json: measurements.errors, status: :unprocessable_entity
         end
+      end
+
+      #http://192.168.1.5/api/v1/measurements/getmeasurementbyuid?patient_id=1
+      def getmeasurementbyuid
+        patient_id = params[:patient_id]
+        measurements = Measurement.where(patient_id: patient_id)
+        render json: measurements
       end
 
       def measurement_param

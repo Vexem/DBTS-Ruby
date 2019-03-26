@@ -1,15 +1,17 @@
 module Api
   module V1
     class Api::V1::UsersController < ApplicationController
-      before_action :set_user, only: [:show, :update, :destroy]
-
+      before_action :userbyid, only: [:show, :edit, :update, :destroy]
       # GET api/v1/users
+      #
+      def show
+      end
       def index
         users = User.all
         render json: { users: users }, status: :ok
       end
 
-      def create
+      def saveuser
         users = User.new(user_params)
 
         if users.save
@@ -17,6 +19,12 @@ module Api
         else
           render json: users.errors, status: :unprocessable_entity
         end
+      end
+
+      def userbyid
+        user_id = params[:user_id]
+        user = User.where(user_id: user_id)
+        render json: user
       end
 
       def user_params
