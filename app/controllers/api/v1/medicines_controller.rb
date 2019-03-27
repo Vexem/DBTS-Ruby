@@ -1,7 +1,6 @@
 module Api
   module V1
-    class Api::V1::MedicinesController < ApplicationController
-      before_action :set_user, only: [:show, :update, :destroy]
+    class MedicinesController < BaseController
 
       # GET api/v1/users
       def index

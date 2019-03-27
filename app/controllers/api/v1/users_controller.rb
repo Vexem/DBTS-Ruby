@@ -1,19 +1,13 @@
 module Api
   module V1
-    class Api::V1::UsersController < ApplicationController
-      before_action :userbyid, only: [:show, :edit, :update, :destroy]
-      # GET api/v1/users
-      #
-      def show
-      end
+    class UsersController < BaseController
       def index
         users = User.all
         render json: { users: users }, status: :ok
       end
 
-      def saveuser
+      def create
         users = User.new(user_params)
-
         if users.save
           render json: users, status: :created
         else

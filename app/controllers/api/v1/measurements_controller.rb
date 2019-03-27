@@ -1,7 +1,6 @@
 module Api
   module V1
-    class Api::V1::MeasurementsController < ApplicationController
-      before_action :getmeasurementbyuid, only: [:show, :edit, :update, :destroy]
+    class MeasurementsController < BaseController
 
       def show
       end

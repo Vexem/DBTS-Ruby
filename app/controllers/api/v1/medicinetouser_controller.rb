@@ -1,7 +1,6 @@
 module Api
   module V1
-    class Api::V1::MedicinetouserController < ApplicationController
-      before_action :set_user, only: [:show, :update, :destroy]
+    class MedicinetouserController < BaseController
 
       def index
         medicinetouser = Medicinetouser.all

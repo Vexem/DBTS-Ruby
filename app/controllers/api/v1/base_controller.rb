@@ -1,6 +1,7 @@
 module Api
   module V1
-    class V1::BaseController < ApplicationController
+    class BaseController < ApplicationController
+      include ::ActionController::Serialization
     end
   end
 end
