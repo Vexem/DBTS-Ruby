@@ -1,6 +1,6 @@
 module Api
   module V1
-    class UsersController < BaseController
+    class Api::V1:: UsersController < BaseController
       def index
         users = User.all
         render json: { users: users }, status: :ok
@@ -22,7 +22,7 @@ module Api
       end
 
       def user_params
-        params.require(:user).permit(:uid, :name, :medic_id, :patient_id, :surname)
+        params.require(:user).permit(:uid, :name, :patient_id, :surname)
       end
     end
   end

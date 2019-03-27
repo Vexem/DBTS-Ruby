@@ -1,6 +1,6 @@
 module Api
   module V1
-    class MedicsController < BaseController
+    class Api::V1:: MedicsController < BaseController
 
       # GET api/v1/users
       def index

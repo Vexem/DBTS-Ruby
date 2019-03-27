@@ -1,6 +1,6 @@
 module Api
   module V1
-    class MedicinetouserController < BaseController
+    class Api::V1:: MedicinetouserController < BaseController
 
       def index
         medicinetouser = Medicinetouser.all

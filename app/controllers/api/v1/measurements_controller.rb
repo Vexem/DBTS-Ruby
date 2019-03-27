@@ -1,6 +1,6 @@
 module Api
   module V1
-    class MeasurementsController < BaseController
+    class Api::V1:: MeasurementsController < BaseController
 
       def show
       end

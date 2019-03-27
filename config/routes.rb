@@ -1,22 +1,23 @@
 Rails.application.routes.draw do
 
   #Api Definition
-  scope module: :api, defaults: { format: :json } do
-    scope module: :api do
+      scope module: :api, defaults: { format: :json } do
+        scope module: :v1 do
 
-      resources :users, only: [:index, :create]
-      resources :medicines, only: [:index, :create]
-      resources :medics, only: [:index, :create]
-      resources :measurements, only: [:index, :create]
-      resources :medicinetouser, only: [:index, :create]
+          resources :users, only: [:index, :create]
+          resources :medicines, only: [:index, :create]
+          resources :medics, only: [:index, :create]
+          resources :measurements, only: [:index, :create]
+          resources :medicinetouser, only: [:index, :create]
 
-      post 'users/saveuser'                 => 'users#create'
-      post 'measurements/savemeasurement'   => 'measurements#create'
-      post 'medicinse/savemedicines'        => 'medicines#create'
-      get  'users/getuserbyid/:user_id'      => 'users#getuserbyid'
+          post 'users/saveuser'                 => 'users#create'
+          post 'measurements/savemeasurement'   => 'measurements#create'
+          post 'medicinse/savemedicines'        => 'medicines#create'
+          get  'users/getuserbyid/:user_id'      => 'users#getuserbyid'
+        end
+      end
     end
-  end
-end
+
 
 
 # DBTSRuby::Application.routes.draw do
