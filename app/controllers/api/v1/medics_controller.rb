@@ -1,7 +1,6 @@
 module Api
   module V1
-    class Api::V1::MedicsController < ApplicationController
-      before_action :set_user, only: [:show, :update, :destroy]
+    class Api::V1:: MedicsController < BaseController
 
       # GET api/v1/users
       def index
@@ -20,7 +19,13 @@ module Api
       end
 
       def medic_param
-        params.require(:medic).permit(:medic_id, :medic_name, :medic_mail, :medic_hospital)
+        params.require(:medic).permit(:medic_id,
+                                      :medic_name,
+                                      :medic_mail,
+                                      :medic_hospital,
+                                      :created_at,
+                                      :updated_at
+                                      )
       end
     end
   end

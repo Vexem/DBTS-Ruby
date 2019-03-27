@@ -1,7 +1,6 @@
 module Api
   module V1
-    class Api::V1::MeasurementsController < ApplicationController
-      before_action :getmeasurementbyuid, only: [:show, :edit, :update, :destroy]
+    class Api::V1:: MeasurementsController < BaseController
 
       def show
       end
@@ -29,7 +28,9 @@ module Api
       end
 
       def measurement_param
-        params.require(:measurement).permit(:patient_id, :value ,:created_at)
+        params.require(:measurement).permit(:patient_id,
+                                            :value,
+                                            :created_at)
       end
     end
   end

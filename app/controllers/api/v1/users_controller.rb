@@ -1,19 +1,13 @@
 module Api
   module V1
-    class Api::V1::UsersController < ApplicationController
-      before_action :userbyid, only: [:show, :edit, :update, :destroy]
-      # GET api/v1/users
-      #
-      def show
-      end
+    class Api::V1:: UsersController < BaseController
       def index
         users = User.all
         render json: { users: users }, status: :ok
       end
 
-      def saveuser
+      def create
         users = User.new(user_params)
-
         if users.save
           render json: users, status: :created
         else
@@ -28,7 +22,16 @@ module Api
       end
 
       def user_params
-        params.require(:user).permit(:uid, :name, :medic_id, :patient_id, :surname)
+        params.require(:user).permit(:user_id,
+                                     :provider,
+                                     :medic_id,
+                                     :first_name,
+                                     :last_name,
+                                     :username,
+                                     :email,
+                                     :oauth_token,
+                                     :oauth_expires_at
+                                      )
       end
     end
   end

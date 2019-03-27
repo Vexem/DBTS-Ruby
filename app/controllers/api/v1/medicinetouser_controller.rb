@@ -1,7 +1,6 @@
 module Api
   module V1
-    class Api::V1::MedicinetouserController < ApplicationController
-      before_action :set_user, only: [:show, :update, :destroy]
+    class Api::V1:: MedicinetouserController < BaseController
 
       def index
         medicinetouser = Medicinetouser.all
@@ -19,7 +18,10 @@ module Api
       end
 
       def medicinetouser_param
-        params.require(:medicinetouser).permit(:patient_id, :medicine_id)
+        params.require(:medicinetouser).permit(:user_id,
+                                               :medicine_id,
+                                               created_at,
+                                               updated_at)
       end
     end
   end
