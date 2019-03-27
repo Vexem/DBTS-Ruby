@@ -28,7 +28,9 @@ module Api
       end
 
       def measurement_param
-        params.require(:measurement).permit(:patient_id, :value ,:created_at)
+        params.require(:measurement).permit(:patient_id,
+                                            :value,
+                                            :created_at)
       end
     end
   end
