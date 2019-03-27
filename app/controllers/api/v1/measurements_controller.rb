@@ -20,11 +20,11 @@ module Api
         end
       end
 
-      #http://192.168.1.5/api/v1/measurements/getmeasurementbyuid?patient_id=1
+      #http://192.168.1.5/measurements/getmeasurementbyuid?patient_id=1
       def getmeasurementbyuid
         patient_id = params[:patient_id]
         measurements = Measurement.where(patient_id: patient_id)
-        render json: measurements
+        render json: { measurements: measurements }, status: :ok
       end
 
       def measurement_param
