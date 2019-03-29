@@ -20,8 +20,6 @@ ActiveRecord::Schema.define(version: 20190323221501) do
 
   create_table "medicines", primary_key: "medicine_id", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "medicine_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "medicinetousers", primary_key: ["user_id", "medicine_id"], force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

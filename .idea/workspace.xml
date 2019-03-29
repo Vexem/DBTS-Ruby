@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="003173d6-8f7c-483a-8247-dd9d1fb643f4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b29cecee-56ed-4c67-80c6-b81953090fed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b29cecee-56ed-4c67-80c6-b81953090fed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTS Web application" beforeDir="false" afterPath="$PROJECT_DIR$/DBTS Web application" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/migrate/20190304102459_create_medicines.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20190304102459_create_medicines.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20190308111044_mto_u.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20190308111044_mto_u.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20190323221501_create_medics.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20190323221501_create_medics.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -56,11 +49,42 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="dbtsruby_development: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Rails DBTSRuby: development" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="dbtsruby_development: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="measurements: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Rails DBTSRuby: development" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="dbtsruby_development: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="medicines: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Rails DBTSRuby: development" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="dbtsruby_development: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="medicinetousers: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20190304102459_create_medicines.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -128,9 +152,9 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/db/migrate/20190323221501_create_medics.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20190304105538_create_measurements.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20190304102459_create_medicines.rb" />
         <option value="$PROJECT_DIR$/DBTS Web application" />
         <option value="$PROJECT_DIR$/db/migrate/20190308111044_mto_u.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20190304102459_create_medicines.rb" />
       </list>
     </option>
   </component>
@@ -233,7 +257,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553876190746" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553877340742" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="E:/Download E/GoogleAuthExampleApp-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -471,12 +495,12 @@
       <workItem from="1553451918244" duration="3448000" />
       <workItem from="1553511146921" duration="2279000" />
       <workItem from="1553703717680" duration="2986000" />
-      <workItem from="1553870862403" duration="6448000" />
+      <workItem from="1553870862403" duration="6834000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133504000" />
+    <option name="totallyTimeSpent" value="133890000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -507,7 +531,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32915717" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.69548875" visible="true" weight="0.50911164" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.69548875" visible="true" weight="0.50911164" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.28839958" side_tool="true" weight="0.28701594" />
       <window_info anchor="bottom" id="Database Console" order="12" sideWeight="0.49946353" weight="0.3291714" />
       <window_info anchor="bottom" id="Messages" order="13" />
@@ -519,7 +543,7 @@
       <window_info anchor="right" id="Maven" order="5" weight="0.17132115" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info active="true" anchor="right" id="Database" order="8" visible="true" weight="0.264232" />
+      <window_info anchor="right" id="Database" order="8" visible="true" weight="0.264232" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1179,13 +1203,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190304102459_create_medicines.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://b29cecee-56ed-4c67-80c6-b81953090fed/schema/dbtsruby_development/table/medicines">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1204,6 +1221,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190304102459_create_medicines.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
