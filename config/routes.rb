@@ -15,6 +15,7 @@ Rails.application.routes.draw do
           post 'medicinse/savemedicines'        => 'medicines#create'
           get  'users/getuserbyid'              => 'users#userbyid'
           get  'measurements/getbyuid'          => 'measurements#getmeasurementbyuid'
+          get  'medic/getbyid'                  => 'medics#medicbyid'
         end
       end
     end

@@ -18,6 +18,12 @@ module Api
         end
       end
 
+      def medicbyid
+        medic_id = params[:medic_id]
+        medic = Medic.where(medic_id: medic_id)
+        render json: medic
+      end
+
       def medic_param
         params.require(:medic).permit(:medic_id,
                                       :medic_name,
