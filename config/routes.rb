@@ -11,11 +11,11 @@ Rails.application.routes.draw do
           resources :medicinetouser, only: [:index, :create]
 
           post 'users/saveuser'                 => 'users#create'
-          post 'measurements/save           '   => 'measurements#create'
+          post 'measurements/save'              => 'measurements#create'
           post 'medicinse/savemedicines'        => 'medicines#create'
           get  'users/getuserbyid'              => 'users#userbyid'
           get  'measurements/getbyuid'          => 'measurements#getmeasurementbyuid'
-          get  'medic/getbyid'                  => 'medics#medicbyid'
+          get  'medics/getbyid'                 => 'medics#medicbyid'
         end
       end
     end

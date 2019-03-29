@@ -20,6 +20,8 @@ to recreate DB
 rails db:environment:set RAILS_ENV=development
 rake db:drop db:create db:migrate
 
+rails db:environment:set RAILS_ENV=development && rake db:drop db:create db:migrate
+
 API
 
  rake routes

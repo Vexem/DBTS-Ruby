@@ -7,11 +7,12 @@ class CreateMedicines < ActiveRecord::Migration[5.1]
     end
 
     execute "alter table medicines add primary key (medicine_id);"
+    execute "alter table medicines modify medicine_id int auto_increment;"
 
-    Medicine.create medicine_id: '10', medicine_name: 'Karvea'
-    Medicine.create medicine_id: '20', medicine_name: 'Torvast'
-    Medicine.create medicine_id: '30', medicine_name: 'Glucophage'
-    Medicine.create medicine_id: '40', medicine_name: 'Janumet'
+    Medicine.create medicine_name: 'Karvea'
+    Medicine.create medicine_name: 'Torvast'
+    Medicine.create medicine_name: 'Glucophage'
+    Medicine.create medicine_name: 'Janumet'
 
 
   end
