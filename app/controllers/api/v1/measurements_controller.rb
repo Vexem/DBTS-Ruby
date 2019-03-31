@@ -34,6 +34,15 @@ module Api
                                    # .having('created_at = MAX(created_at)')
         render json: { last_measurement: ordered_measurements }, status: :ok
       end
+      def getdailyvalues
+        patient_id = params[:patient_id]
+        measurements = Measurement.where(patient_id: patient_id)
+        daily_measurements = measurements.where(created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day)
+        # .having('created_at = MAX(created_at)')
+        render json: { daily_measurements: daily_measurements }, status: :ok
+
+        # .all(:conditions => { :created_at => (Time.now.midnight - 1.day)..Time.now.midnight})
+      end
 
       def measurement_param
         params.require(:measurement).permit(:patient_id,

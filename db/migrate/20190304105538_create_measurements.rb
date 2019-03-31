@@ -2,6 +2,7 @@ class CreateMeasurements < ActiveRecord::Migration[5.1]
   def change
     create_table :measurements, id: false do |t|
       t.decimal :patient_id, precision:25, scale:0
+      t.string :when_is_inserted
       t.integer :value
       t.timestamps
     end
