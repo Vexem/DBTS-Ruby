@@ -17,6 +17,12 @@ module Api
         end
       end
 
+      def getbyid
+        medicine_id = params[:medicine_id]
+        medicine_id = Medicinetouser.where(user_id: user_id)
+        render json: medicinetouser_param
+      end
+
       def medicinetouser_param
         params.require(:medicinetouser).permit(:user_id,
                                                :medicine_id,

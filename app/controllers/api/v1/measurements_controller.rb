@@ -27,6 +27,14 @@ module Api
         render json: { measurements: measurements }, status: :ok
       end
 
+      def getlastmeasurementbyid
+        patient_id = params[:patient_id]
+        measurements = Measurement.where(patient_id: patient_id)
+        ordered_measurements = measurements.order("created_at DESC").first
+                                   # .having('created_at = MAX(created_at)')
+        render json: { last_measurement: ordered_measurements }, status: :ok
+      end
+
       def measurement_param
         params.require(:measurement).permit(:patient_id,
                                             :value,

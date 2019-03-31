@@ -16,6 +16,7 @@ Rails.application.routes.draw do
           get  'users/getuserbyid'              => 'users#userbyid'
           get  'measurements/getbyuid'          => 'measurements#getmeasurementbyuid'
           get  'medics/getbyid'                 => 'medics#medicbyid'
+          get  'measurements/lastbyid'          => 'measurements#getlastmeasurementbyid'
         end
       end
     end
