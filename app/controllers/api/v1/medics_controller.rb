@@ -21,7 +21,7 @@ module Api
       def medicbyid
         medic_id = params[:medic_id]
         medic = Medic.where(medic_id: medic_id)
-        render json: medic
+        render json: { medic: medic }, status: :ok
       end
 
       def medic_param
