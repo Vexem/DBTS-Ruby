@@ -18,6 +18,7 @@ Rails.application.routes.draw do
           get  'medics/getbyid'                 => 'medics#medicbyid'
           get  'measurements/lastbyid'          => 'measurements#getlastmeasurementbyid'
           get  'measurements/dailyvaluesbyid'   => 'measurements#getdailyvalues'
+          get  'measurements/patientmeasord'    => 'measurements#getlastmeasurementorderdbyid'
         end
       end
     end

@@ -34,6 +34,14 @@ module Api
                                    # .having('created_at = MAX(created_at)')
         render json: { last_measurement: ordered_measurements }, status: :ok
       end
+
+      def getlastmeasurementorderdbyid
+        patient_id = params[:patient_id]
+        measurements = Measurement.where(patient_id: patient_id)
+        ordered_measurements = measurements.order("created_at DESC").where(created_at: Time.now.beginning_of_month..Time.now.end_of_month)
+        render json: { last_measurements: ordered_measurements }, status: :ok
+      end
+
       def getdailyvalues
         patient_id = params[:patient_id]
         measurements = Measurement.where(patient_id: patient_id)
