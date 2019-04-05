@@ -12,9 +12,10 @@
 
 ActiveRecord::Schema.define(version: 20190323221501) do
 
-  create_table "measurements", primary_key: ["patient_id", "created_at"], force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "measurements", primary_key: ["patient_id", "created_at", "value"], force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.decimal "patient_id", precision: 25, null: false
-    t.integer "value"
+    t.string "when_is_inserted"
+    t.integer "value", null: false
     t.datetime "created_at", null: false
   end
 

@@ -6,8 +6,9 @@ class CreateMeasurements < ActiveRecord::Migration[5.1]
       t.integer :value
       t.timestamps
     end
-     execute "alter table measurements add primary key (patient_id, created_at);"
+     execute "alter table measurements add primary key (patient_id, created_at, value);"
      execute "alter table measurements drop column updated_at;"
      add_foreign_key :measurements, :users, column: :patient_id, primary_key: "user_id"
+
   end
 end
