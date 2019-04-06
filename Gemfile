@@ -9,9 +9,13 @@ gem 'composite_primary_keys', '>= 10'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
 # Use mysql as the database for Active Record
-# gem 'mysql2', '>= 0.3.18', '< 0.6.0'
+#
+# gem 'mysql2'
 
 # gem 'sqlite3'
+
+gem 'pg'
+
 
 gem "omniauth-google-oauth2"
 # Use Puma as the app server
@@ -21,7 +25,6 @@ gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 
-gem 'pg'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
