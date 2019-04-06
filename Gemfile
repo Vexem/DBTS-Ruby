@@ -6,28 +6,19 @@ source 'https://rubygems.org'
 # end
 
 gem 'composite_primary_keys', '>= 10'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails'
+gem 'rails', '~> 5.1.6', '>= 5.1.6.1'
 # Use mysql as the database for Active Record
-#
-gem 'mysql2'
-
-# gem 'sqlite3'
-
-gem 'pg'
-
-
+gem 'mysql2', '>= 0.3.18', '< 0.6.0'
 gem "omniauth-google-oauth2"
 # Use Puma as the app server
-#
-gem 'puma'
+gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails'
-
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 
+gem 'pg'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -37,7 +28,6 @@ gem 'coffee-rails'
 # gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'
-
 gem 'factory_bot'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
@@ -61,12 +51,7 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console'
-end
-
-group :production do
-  # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console'
+  gem 'web-console', '>= 3.3.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
