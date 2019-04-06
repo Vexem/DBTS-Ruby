@@ -11,7 +11,7 @@ gem 'composite_primary_keys', '>= 10'
 gem 'rails'
 # Use mysql as the database for Active Record
 #
-# gem 'mysql2'
+gem 'mysql2'
 
 # gem 'sqlite3'
 
