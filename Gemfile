@@ -9,9 +9,9 @@ gem 'composite_primary_keys', '>= 10'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
 # Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.3.18', '< 0.6.0'
+# gem 'mysql2', '>= 0.3.18', '< 0.6.0'
 
-gem 'sqlite3'
+# gem 'sqlite3'
 
 gem "omniauth-google-oauth2"
 # Use Puma as the app server
