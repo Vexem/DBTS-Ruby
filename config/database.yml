@@ -47,8 +47,8 @@ development:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-#production:
-#  <<: *default
-#  database: DBTSRuby_production
-#  username: DBTSRuby
-#  password: <%= ENV['DBTSRUBY_DATABASE_PASSWORD'] %>
+production:
+  <<: *default
+  database: DBTSRuby_production
+  username: DBTSRuby
+  password: <%= ENV['DBTSRUBY_DATABASE_PASSWORD'] %>
